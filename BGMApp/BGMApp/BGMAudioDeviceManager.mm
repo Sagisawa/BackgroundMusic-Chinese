@@ -368,7 +368,7 @@ static OSStatus BGMDeviceListenerProc(AudioObjectID inObjectID,
           "%s%d. %@",
           deviceID,
           "Error: ", errorCode,
-          (revertTo ? [NSString stringWithFormat:@"Will attempt to revert to the previous device. "
+          (revertTo ? [NSString stringWithFormat:@"将尝试恢复之前的设备。"
                                                   "Previous device ID: %u.", *revertTo] : @""));
     
     NSDictionary* __nullable info = nil;

@@ -375,12 +375,12 @@ static NSInteger const kOutputDeviceMenuItemTag = 5;
         
         // NSAlerts should only be shown on the main thread.
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"Failed to set output device: %@", deviceName);
+            NSLog(@"设置输出设备失败：%@", deviceName);
             
             NSAlert* alert = [NSAlert new];
             
             alert.messageText =
-                [NSString stringWithFormat:@"Failed to set %@ as the output device.", deviceName];
+                [NSString stringWithFormat:@"将 %@ 设为输出设备失败。", deviceName];
             alert.informativeText = @"This is probably a bug. Feel free to report it.";
             
             [alert runModal];

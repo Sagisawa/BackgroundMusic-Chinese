@@ -186,11 +186,11 @@ void* __nullable BGMTermination::ExitSignalsProc(void* __nullable ignored)
 
     if(signal == SIGINT)
     {
-        NSLog(@"Interrupted.");
+        NSLog(@"已中断。");
     }
     else if(signal == SIGTERM)
     {
-        NSLog(@"Exiting.");
+        NSLog(@"正在退出。");
     }
 
     CleanUpAudioDevices();

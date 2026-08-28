@@ -170,10 +170,10 @@
     // use notifications instead of an NSAlert. But it probably wouldn't happen often enough to be
     // worth the effort.
     NSAlert* alert = [NSAlert new];
-    alert.messageText = @"Background Music needs permission to control GPMDP.";
+    alert.messageText = @"Background Music 需要控制 GPMDP 的权限。";
     alert.informativeText = @"It should be displaying a four-digit code for you to enter.";
     [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:@"取消"];
 
     // The text field to type the auth code in.
     // TODO: Can we derive these dimensions from something instead of hardcoding them?

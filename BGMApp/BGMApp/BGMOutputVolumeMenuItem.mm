@@ -40,7 +40,7 @@
 
 const float                    kSliderEpsilon           = 1e-10f;
 const AudioObjectPropertyScope kScope                   = kAudioDevicePropertyScopeOutput;
-NSString* const __nonnull      kGenericOutputDeviceName = @"Output Device";
+NSString* const __nonnull      kGenericOutputDeviceName = @"输出设备";
 
 @implementation BGMOutputVolumeMenuItem {
     BGMAudioDeviceManager* audioDevices;

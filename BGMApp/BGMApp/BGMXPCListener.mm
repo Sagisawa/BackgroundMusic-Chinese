@@ -214,7 +214,7 @@
             break;
             
         case kAudioHardwareIllegalOperationError:
-            description = @"The output device is not available.";
+            description = @"输出设备不可用。";
             err = kBGMXPC_HardwareError;
             break;
             
@@ -225,7 +225,7 @@
             break;
             
         default:
-            description = @"Unknown error while waiting for the output device.";
+            description = @"等待输出设备时发生未知错误。";
             err = kBGMXPC_InternalError;
             break;
     }

@@ -148,7 +148,7 @@ static NSString* const kOptShowDockIcon      = @"--show-dock-icon";
                     //
                     // TODO: It would be nice if this dialog had a shortcut to open the System
                     //       Preferences panel. See showSetDeviceAsDefaultError.
-                    [self showErrorMessage:@"Background Music needs permission to use microphones."
+                    [self showErrorMessage:@"Background Music 需要使用麦克风的权限。"
                            informativeText:@"It uses a virtual microphone to access your system's "
                                             "audio.\n\nYou can grant the permission by going to "
                                             "System Preferences > Security and Privacy > "
@@ -237,9 +237,9 @@ static NSString* const kOptShowDockIcon      = @"--show-dock-icon";
 
     if (error) {
         [self showSetDeviceAsDefaultError:error
-                                  message:@"Could not set the Background Music device as your"
+                                  message:@"无法将 Background Music 设备设为你的"
                                            "default audio device."
-                          informativeText:@"You might be able to change it yourself."];
+                          informativeText:@"你也可以自己手动更改。"];
     }
 }
 
@@ -385,8 +385,8 @@ static NSString* const kOptShowDockIcon      = @"--show-dock-icon";
     
     if (error) {
         [self showSetDeviceAsDefaultError:error
-                                  message:@"Failed to reset your system's audio output device."
-                          informativeText:@"You'll have to change it yourself to get audio working again."];
+                                  message:@"重置系统音频输出设备失败。"
+                          informativeText:@"你需要自己改回音频设备才能恢复声音。"];
     }
 }
 
@@ -398,8 +398,8 @@ static NSString* const kOptShowDockIcon      = @"--show-dock-icon";
     //
     // TODO: Check whether the driver files are in /Library/Audio/Plug-Ins/HAL? Might even want to
     //       offer to install them if not.
-    [self showErrorMessage:@"Could not find the Background Music virtual audio device."
-           informativeText:@"Make sure you've installed Background Music Device.driver to "
+    [self showErrorMessage:@"找不到 Background Music 虚拟音频设备。"
+           informativeText:@"请确认已将 Background Music Device.driver 安装到 "
                             "/Library/Audio/Plug-Ins/HAL and restarted coreaudiod (e.g. \"sudo "
                             "killall coreaudiod\")."
  exitAfterMessageDismissed:YES];
@@ -407,11 +407,11 @@ static NSString* const kOptShowDockIcon      = @"--show-dock-icon";
 
 - (void) showFailedToSetOutputDeviceErrorMessage:(NSError*)error
                                  preferredDevice:(BGMAudioDevice)device {
-    NSLog(@"Failed to set initial output device. Error: %@", error);
+    NSLog(@"设置初始输出设备失败。错误：%@", error);
 
     dispatch_async(dispatch_get_main_queue(), ^{
         NSAlert* alert = [NSAlert alertWithError:BGMNN(error)];
-        alert.messageText = @"Failed to set the output device.";
+        alert.messageText = @"设置输出设备失败。";
 
         NSString* __nullable name = nil;
         BGM_Utils::LogAndSwallowExceptions(BGMDbgArgs, [&] {
@@ -419,7 +419,7 @@ static NSString* const kOptShowDockIcon      = @"--show-dock-icon";
         });
 
         alert.informativeText =
-                [NSString stringWithFormat:@"Could not start the device '%@'. (Error: %ld)",
+                [NSString stringWithFormat:@"无法启动设备“%@”。（错误：%ld）",
                         name, error.code];
 
         [alert runModal];
@@ -428,8 +428,8 @@ static NSString* const kOptShowDockIcon      = @"--show-dock-icon";
 
 - (void) showOutputDeviceNotFoundErrorMessageAndExit {
     // We couldn't find any output devices. Show an error dialog and exit.
-    [self showErrorMessage:@"Could not find an audio output device."
-           informativeText:@"If you do have one installed, this is probably a bug. Sorry about "
+    [self showErrorMessage:@"找不到音频输出设备。"
+           informativeText:@"如果你确实已安装，这可能是程序 bug。抱歉"
                             "that. Feel free to file an issue on GitHub."
  exitAfterMessageDismissed:YES];
 }
@@ -487,7 +487,7 @@ exitAfterMessageDismissed:(BOOL)fatal {
         alert.informativeText = info;
         
         [alert addButtonWithTitle:@"OK"];
-        [alert addButtonWithTitle:@"Open Sound in System Preferences"];
+        [alert addButtonWithTitle:@"打开“系统设置”中的“声音”"];
         
         NSModalResponse buttonClicked = [alert runModal];
         
@@ -502,7 +502,7 @@ exitAfterMessageDismissed:(BOOL)fatal {
         [SBApplication applicationWithBundleIdentifier:@"com.apple.systempreferences"];
     
     if (!sysPrefs) {
-        NSLog(@"Could not open System Preferences");
+        NSLog(@"无法打开“系统设置”");
         return;
     }
     

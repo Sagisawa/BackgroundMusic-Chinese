@@ -78,7 +78,7 @@ static NSInteger const kContributorsLabelTag = 4;
             [[bundle infoDictionary] objectForKey:@"CFBundleShortVersionString"];
         
         if (version) {
-            versionLabel.stringValue = [NSString stringWithFormat:@"Version %@", version];
+            versionLabel.stringValue = [NSString stringWithFormat:@"版本 %@", version];
         }
         
         // Copyright notice label

@@ -30,7 +30,7 @@
 
 #pragma clang assume_nonnull begin
 
-static NSString* const kMenuItemTitleFormat = @"Auto-pause %@";
+static NSString* const kMenuItemTitleFormat = @"自动暂停 %@";
 static NSString* const kMenuItemDisabledToolTipFormat = @"%@ doesn't appear to be running.";
 
 // Wait time to disable/enable the auto-pause menu item, in seconds.

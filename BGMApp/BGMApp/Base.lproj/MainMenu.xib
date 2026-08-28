@@ -31,47 +31,47 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu id="8AN-nh-rEe" userLabel="BGM Menu">
             <items>
-                <menuItem title="Auto-pause Music" tag="2" id="nHv-T8-1nb">
+                <menuItem title="音乐自动暂停" tag="2" id="nHv-T8-1nb">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <accessibility help="Enable to automatically pause your selected music player when a different app starts playing audio." identifier="Auto-pause enabled"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="ZGd-Pq-YeA"/>
-                <menuItem title="Volumes" tag="3" enabled="NO" id="8PP-wA-Pae">
+                <menuItem title="音量" tag="3" enabled="NO" id="8PP-wA-Pae">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" tag="4" id="rkf-nx-H2J"/>
-                <menuItem title="Output Device" tag="5" enabled="NO" id="chk-9C-pab">
+                <menuItem title="输出设备" tag="5" enabled="NO" id="chk-9C-pab">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="D3z-zv-JrJ"/>
-                <menuItem title="Preferences" tag="1" id="BHb-uh-9Zm">
+                <menuItem title="偏好设置" tag="1" id="BHb-uh-9Zm">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Preferences" id="Img-Dh-cpU">
+                    <menu key="submenu" title="偏好设置" id="Img-Dh-cpU">
                         <items>
-                            <menuItem title="Auto-pause" tag="1" enabled="NO" id="2aT-t7-HGW">
+                            <menuItem title="自动暂停" tag="1" enabled="NO" id="2aT-t7-HGW">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="nb1-jq-97L"/>
-                            <menuItem title="Status Bar Icon" enabled="NO" id="CmD-ot-1wE">
+                            <menuItem title="状态栏图标" enabled="NO" id="CmD-ot-1wE">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                             </menuItem>
-                            <menuItem title="Background Music Logo" state="on" tag="2" id="9VF-qy-6fh">
+                            <menuItem title="Background Music 图标" state="on" tag="2" id="9VF-qy-6fh">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                             </menuItem>
-                            <menuItem title="Volume Icon" tag="3" id="B47-O2-wd0">
+                            <menuItem title="音量图标" tag="3" id="B47-O2-wd0">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="pYP-Fy-nKA"/>
-                            <menuItem title="About Background Music" tag="4" id="R45-Vo-Eto">
+                            <menuItem title="关于 Background Music" tag="4" id="R45-Vo-Eto">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                             </menuItem>
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Debug Logging" hidden="YES" toolTip="Log detailed messages to help diagnose bugs. Search for &quot;bgm&quot; or &quot;background music&quot; in Console.app." id="sc9-vO-KyP">
+                <menuItem title="调试日志" hidden="YES" toolTip="Log detailed messages to help diagnose bugs. Search for &quot;bgm&quot; or &quot;background music&quot; in Console.app." id="sc9-vO-KyP">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
-                <menuItem title="Quit Background Music" id="Nj2-gJ-DhW">
+                <menuItem title="退出 Background Music" id="Nj2-gJ-DhW">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="terminate:" target="-1" id="seH-Fc-tXb"/>
@@ -147,7 +147,7 @@
                 <textField identifier="AppName" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xmd-bg-huG" customClass="BGMAVM_AppNameLabel">
                     <rect key="frame" x="44" y="27" width="87" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="App name here" usesSingleLineMode="YES" id="ZHF-ZW-Oqg">
+                    <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="应用名称" usesSingleLineMode="YES" id="ZHF-ZW-Oqg">
                         <font key="font" metaFont="message" size="11"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -177,7 +177,7 @@
                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="1" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ekc-h0-I43">
                         <rect key="frame" x="71" y="100" width="240" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Version 0.5.0" id="FDH-7l-wFf">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="版本 0.5.0" id="FDH-7l-wFf">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -186,7 +186,7 @@
                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L5P-Lw-aCd">
                         <rect key="frame" x="413" y="298" width="270" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Licensed under GPL v2 or any later version." id="ETh-En-bzX">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="基于 GPL v2 或更高版本许可。" id="ETh-En-bzX">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -254,7 +254,7 @@
                     <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6qu-yI-r00">
                         <rect key="frame" x="413" y="20" width="203" height="11"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="The AirPlay Logo is a trademark of Apple Inc." id="lx7-k3-q16">
+                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="AirPlay 标志是 Apple Inc. 的商标。" id="lx7-k3-q16">
                             <font key="font" metaFont="menu" size="9"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -263,7 +263,7 @@
                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="2" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vy4-dv-jQB">
                         <rect key="frame" x="18" y="75" width="155" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Copyright © 2016-2026" placeholderString="" id="ctF-95-uVu">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="版权所有 © 2016-2026" placeholderString="" id="ctF-95-uVu">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -272,7 +272,7 @@
                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="4" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tRj-QC-GuQ" customClass="BGMLinkField">
                         <rect key="frame" x="168" y="75" width="194" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" tag="3" title="Background Music contributors" placeholderString="" allowsEditingTextAttributes="YES" usesSingleLineMode="YES" id="UC2-MX-fML">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" tag="3" title="Background Music 贡献者" placeholderString="" allowsEditingTextAttributes="YES" usesSingleLineMode="YES" id="UC2-MX-fML">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -307,7 +307,7 @@
                 <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-C6-SLv">
                     <rect key="frame" x="20" y="25" width="226" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Volume" id="60O-ju-B5C">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="音量" id="60O-ju-B5C">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -329,7 +329,7 @@
                 <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iKs-df-Hp6">
                     <rect key="frame" x="44" y="1" width="86" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="System Sounds" id="ATK-L8-s8z">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="系统声音" id="ATK-L8-s8z">
                         <font key="font" metaFont="message" size="11"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
