@@ -5,6 +5,53 @@
 # Background Music
 ##### macOS audio utility
 
+<!-- ==================== 中文版说明（由汉化提交添加） ==================== -->
+
+# 🌏 中文汉化版
+
+本仓库在 [Background Music](https://github.com/kyleneideck/BackgroundMusic) 原版基础上，将 **界面文字汉化为简体中文**。
+
+## 汉化内容
+
++ **菜单栏主菜单**：音乐自动暂停、音量、输出设备、偏好设置、关于、调试日志、退出
++ **偏好设置面板**：自动暂停延迟、暂停延迟、最长取消暂停、静音/取消静音、关闭等
++ **音量控制菜单**：音量、系统声音、各应用的音量/声像
++ **错误提示弹窗**：设置输出设备失败、找不到音频输出设备、重置系统音频输出设备失败等
++ **关于面板**：版本、版权、许可证说明
+
+品牌名（Background Music、AirPlay）与声道符号（L/R）按惯例保留英文。
+
+## 安装中文版
+
+> **注意**：本汉化版只包含 `Background Music.app`（界面程序），**不含音频驱动**。如果从未安装过原版，需要先安装驱动才能正常发声。
+
+1. 从 **Releases** 下载 `Background-Music-中文版.dmg`（或 `.zip`）
+2. 将 `Background Music.app` 拖入 `/Applications`
+3. 若系统提示“无法打开”，请在“系统设置 → 隐私与安全性”中点击“仍要打开”
+4. 首次启动后，在“系统设置 → 声音 → 输出”中确认已选择 **Background Music** 设备
+
+> 如果之前已安装过原版（驱动已装好），直接替换 app 即可。
+
+## 从源码编译
+
+需要 **Xcode**（含命令行工具）：
+
+```bash
+git clone https://github.com/Sagisawa/BackgroundMusic-Chinese.git
+cd BackgroundMusic-Chinese
+xcodebuild -project BGMApp/BGMApp.xcodeproj -target "Background Music" -configuration Release build
+```
+
+编译产物在 `BGMApp/build/Release/Background Music.app`。
+
+## 与上游的关系
+
++ 基于 [kyleneideck/BackgroundMusic](https://github.com/kyleneideck/BackgroundMusic) `master`（v0.5.0）
++ 汉化改动集中在最顶部的 `界面汉化为中文` 提交（12 个文件）
++ 汉化方式：仅替换 Objective-C 字符串字面量（`@"..."`）与 xib 的 `title="..."` 属性，不触碰任何代码逻辑
+
+<!-- ==================== 中文版说明结束 ==================== -->
+
 <img src="Images/README/Screenshot.png" width="340" height="443" />
 
 [Overview](#overview)<br/>
